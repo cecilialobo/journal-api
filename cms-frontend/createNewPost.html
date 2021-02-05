@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>Create your Post</title>
+</head>
+
+<body>
+    <h1>Have some awesome news for us?</h1>
+    <div class="divForm">
+        <label for="inputPostTitle">Add a title to your new post:</label>
+        <input type="text" id="inputPostTitle" name="inputPostTitle" required>
+    </div>
+    
+    <div class="divForm">
+        <label for="inputPostAuthor">Author's name:</label>
+        <input type="text" id="inputPostAuthor" name="inputPostAuthor" required>
+    </div>
+    
+    <div class="divForm">
+        <label for="inputPostCategory">Category:</label>
+        <input type="text" id="inputPostCategory" name="inputPostCategory" required>
+    </div>
+    
+    <div class="divForm">
+        <textarea id="inputPostContent" name="inputPostContent" placeholder="Tell us more about your news!"
+            required></textarea>
+    </div>
+    <button id="sendNews">Send News</button>
+</body>
+<script src="createNewPost.js"></script>
+
+</html>

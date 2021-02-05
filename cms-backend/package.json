@@ -1,0 +1,17 @@
+{
+  "name": "cms-backend",
+  "version": "1.0.0",
+  "description": "NewsBlog API using Node.js and Express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"No test found\"",
+    "start": "node app.js"
+  },
+  "author": "Cecilia Lobo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
