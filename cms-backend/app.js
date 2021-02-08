@@ -69,19 +69,21 @@ app.delete('/posts/:idOfPost', (req, res) => {
 
 app.put('/posts/:idOfPost', (req, res) => {
     const { idOfPost } = req.params;
+    let wasEdited = false;
+    const postEdited = {
+        
+    }
 
-    //colocar a lógica para editar o post
+    for(let i = 0; i < database.length; i++) {
+        if(database[i].id == idOfPost) {
+            database[i].title = //pegar novo title do request body;
+            database[i].category = //pegar novo do request body;
+            database[i].author = //pegar novo do request body;
+            database[i].content = //pegar novo do request body;
+        }
+    };
 
-    // for(let i = 0; i < database.length; i++) {
-    //     if(database[i].id == idOfPost) {
-    //         database[i].title = //pegar novo title do request body;
-    //         database[i].category = //pegar novo do request body;
-    //         database[i].author = //pegar novo do request body;
-    //         database[i].content = //pegar novo do request body;
-    //     }
-    // };
-
-    res.status(200).send();
+    res.status(wasEdited ? 200 : 404).send();
 });
 
 app.listen(port, () => {

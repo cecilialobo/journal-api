@@ -4,33 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="style.css">
     <title>Create your Post</title>
 </head>
 
 <body>
-    <h1>Something new to tell?</h1>
-    <div class="divForm">
-        <label for="inputPostTitle">Add a title to your new post:</label>
-        <input type="text" id="inputPostTitle" name="inputPostTitle" required>
-    </div>
-    
-    <div class="divForm">
-        <label for="inputPostAuthor">Author's name:</label>
-        <input type="text" id="inputPostAuthor" name="inputPostAuthor" required>
-    </div>
-    
-    <div class="divForm">
-        <label for="inputPostCategory">Category:</label>
-        <input type="text" id="inputPostCategory" name="inputPostCategory" required>
-    </div>
-    
-    <div class="divForm">
-        <textarea id="inputPostContent" name="inputPostContent" placeholder="Tell me more about it!"
-            required></textarea>
-    </div>
-    <button id="sendNews">Send Post</button>
+    <header>
+        <a href="index.html">Home</a>
+    </header>
+    <div id="posts">
+        <h1>Something new to tell?</h1>
+        <div class="divForm">
+            <label for="inputPostTitle">Add a title to your new post:</label>
+            <input type="text" id="inputPostTitle" name="inputPostTitle" required>
+        </div>
+        
+        <div class="divForm">
+            <label for="inputPostAuthor">Author's name:</label>
+            <input type="text" id="inputPostAuthor" name="inputPostAuthor" required>
+        </div>
+        
+        <div class="divForm">
+            <label for="inputPostCategory">Category:</label>
+            <input type="text" id="inputPostCategory" name="inputPostCategory" required>
+        </div>
+        
+        <div class="divForm">
+            <textarea id="inputPostContent" name="inputPostContent" placeholder="Tell me more about it!"
+                required></textarea>
+        </div>
+        <button id="sendNews">Send Post</button>
+    </div>    
 </body>
 <script src="createNewPost.js"></script>
 
