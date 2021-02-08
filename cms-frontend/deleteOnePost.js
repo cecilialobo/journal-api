@@ -1,4 +1,4 @@
-module.exports.deleteOnePost = (idOfPost) => {
+const deleteOnePost = (idOfPost) => {
     const apiPath = `http://localhost:3000/posts/${idOfPost}`;
 
     fetch(apiPath, { method: 'DELETE' })
@@ -9,5 +9,3 @@ module.exports.deleteOnePost = (idOfPost) => {
             }
         });
 };
-
-//fazer esses modulos funcionarem

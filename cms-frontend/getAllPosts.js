@@ -1,8 +1,3 @@
-// const deleteOnePost = require("./deleteOnePost.js");
-// const editOnePost = require("./editOnePost.js");
-
-//consertar esses modulos
-
 const getAllPosts = () => {
     const apiPath = "http://localhost:3000/posts";
 
@@ -23,30 +18,6 @@ const getAllPosts = () => {
                 }
 
                 createPostDiv(post);
-            }
-        });
-};
-
-const editOnePost = (idOfPost) => {
-    const apiPath = `http://localhost:3000/posts/${idOfPost}`;
-
-    fetch(apiPath, { method: "PUT" })
-        .then(response => {
-            if (response.status === 200) {
-                alert("The post was edited.");
-                window.location.reload();
-            }
-        });
-};
-
-deleteOnePost = (idOfPost) => {
-    const apiPath = `http://localhost:3000/posts/${idOfPost}`;
-
-    fetch(apiPath, { method: 'DELETE' })
-        .then(response => {
-            if (response.status === 204) {
-                alert("The post was deleted.");
-                window.location.reload();
             }
         });
 };

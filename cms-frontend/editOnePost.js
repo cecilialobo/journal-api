@@ -1,4 +1,4 @@
-module.exports.editOnePost = (idOfPost) => {
+const editOnePost = (idOfPost) => {
     const apiPath = `http://localhost:3000/posts/${idOfPost}`;
 
     fetch(apiPath, { method: "PUT" })
@@ -9,5 +9,3 @@ module.exports.editOnePost = (idOfPost) => {
             }
         });
 };
-
-//fazer o modulo funcionar
