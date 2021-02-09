@@ -54,12 +54,12 @@ app.post('/posts', (req, res) => {
     res.status(201).send();
 });
 
-app.delete('/posts/:idOfPost', (req, res) => {
-    const { idOfPost } = req.params;
+app.delete('/posts/:id', (req, res) => {
+    const { id } = req.params;
     let wasDeleted = false;
 
     for(let i = 0; i < database.length; i++) {
-        if(database[i].id == idOfPost) {
+        if(database[i].id == id) {
             database.splice(i, 1);
             wasDeleted = true;
         }
@@ -67,18 +67,19 @@ app.delete('/posts/:idOfPost', (req, res) => {
     res.status(wasDeleted ? 204 : 404).send();
 });
 
-app.put('/posts/:idOfPost', (req, res) => {
-    const { idOfPost } = req.params;
+app.put('/posts/:id', (req, res) => {
+    const { id } = req.params;
     let wasEdited = false;
+    console.log(req.body);
     const postEdited = {
-        "title": "new title",
-        "category": "new category",
-        "author": "new author",
-        "content": "new content"
+        "title": req.body.title,
+        "category": req.body.category,
+        "author": req.body.author,
+        "content": req.body.content
     }
 
     for(let i = 0; i < database.length; i++) {
-        if(database[i].id == idOfPost) {
+        if(database[i].id == id) {
             database[i].title = postEdited.title
             database[i].category =  postEdited.category
             database[i].author = postEdited.author

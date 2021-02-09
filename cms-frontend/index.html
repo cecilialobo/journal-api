@@ -5,18 +5,47 @@
         <title>My Blog</title>
         <link type="text/css" rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
-        <script src="deleteOnePost.js"></script>
-        <script src="editOnePost.js"></script>
-        <script src="getAllPosts.js"></script>
     </head>
     <body>
-        <header>
-            <a>Categories</a>
-            <a>Edit Posts</a>
-            <a href="createNewPost.html">Add New</a>
-        </header>
-        <div id="posts">
-            <h1>Welcome to your journal, Cecilia!</h1>
+        <div id="mainPosts">
+            <header>
+                <a>Categories</a>
+                <a>Edit Posts</a>
+                <a href="createNewPost.html">Add New</a>
+            </header>
+            <div id="posts">
+                <h1>Welcome to your journal, Cecilia!</h1>
+            </div>
+        </div>
+        <div id="form">
+            <div class="header">
+                <a href="index.html">Home</a>
+            </div>
+            <div id="posts">
+                <h1>Edit here your Post</h1>
+                <div class="divForm">
+                    <label for="inputPostTitle">Edit the title of the post:</label>
+                    <input type="text" id="editPostTitle" name="inputPostTitle" required>
+                </div>
+                
+                <div class="divForm">
+                    <label for="inputPostAuthor">Edit Author's name:</label>
+                    <input type="text" id="editPostAuthor" name="inputPostAuthor" required>
+                </div>
+                
+                <div class="divForm">
+                    <label for="inputPostCategory">Edit Category:</label>
+                    <input type="text" id="editPostCategory" name="inputPostCategory" required>
+                </div>
+                
+                <div class="divForm">
+                    <textarea id="editPostContent" name="inputPostContent" required></textarea>
+                </div>
+                <button id="editPost">Edit Post</button>
+            </div> 
         </div>
     </body>
+    <script src="deleteOnePost.js"></script>
+    <script src="editPost.js"></script>
+    <script src="getAllPosts.js"></script>
 </html>

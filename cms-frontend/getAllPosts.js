@@ -56,7 +56,8 @@ const createPostDiv = (post) => {
     const createButtonToEdit = document.createElement("button");
     createButtonToEdit.classList.add(`editPost${idOfPost}`);
     createButtonToEdit.innerHTML = "Edit this post";
-    createButtonToEdit.addEventListener("click", () => {editOnePost(idOfPost)});
+    // createButtonToEdit.addEventListener("click", () => {editPost(idOfPost)});
+    createButtonToEdit.addEventListener("click", () => {openEditPage(idOfPost, post)});
     newPostDiv.appendChild(createButtonToEdit);
 
     const createLine = document.createElement("hr");
