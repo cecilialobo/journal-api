@@ -31,8 +31,8 @@ const editPost = (idOfPost) => {
 
     const requestBody = {
         title: titleEdited,
-        category: authorEdited,
-        author: categoryEdited,
+        category: categoryEdited,
+        author: authorEdited,
         content: contentEdited
     };
 
