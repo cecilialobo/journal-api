@@ -11,9 +11,6 @@ const openEditPage = (idOfPost, post) => {
     const inputForAuthor = document.getElementById("editPostAuthor");
     inputForAuthor.setAttribute("value", `${post.author}`);
 
-    const inputForCategory = document.getElementById("editPostCategory");
-    inputForCategory.setAttribute("value", `${post.category}`);
-
     const inputForContent = document.getElementById("editPostContent");
     inputForContent.innerHTML = `${post.content}`;
 
