@@ -46,7 +46,7 @@ app.delete('/posts/:id', (req, res) => {
 app.put('/posts/:id', (req, res) => {
     const { id } = req.params;
     let wasEdited = false;
-    console.log(req.body);
+    
     const postEdited = {
         "title": req.body.title,
         "category": req.body.category,

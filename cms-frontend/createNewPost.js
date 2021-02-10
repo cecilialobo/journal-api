@@ -17,7 +17,7 @@ const createNewPost = () => {
         .then (response => {
             if(response.status === 201) {
                 alert("Thanks for the news!");
-                window.location.reload();
+                window.location.assign("index.html");
             }
         });
 };

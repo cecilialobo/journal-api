@@ -20,7 +20,7 @@ const getPostsByCategory = (category) => {
         })
         .then(responseBody => {
             const posts = responseBody.posts;
-            console.log(posts)
+            
             for (let i = 0; i < posts.length; i++) {
                 const post = {
                     id: posts[i].id,
@@ -32,6 +32,9 @@ const getPostsByCategory = (category) => {
 
                 createCategoryDiv(post, category);
             }
+
+            const categoryTitle = document.getElementById("categoryTitle")
+            categoryTitle.innerHTML = `Category: ${category}`;
         });
 }
 
@@ -43,10 +46,6 @@ const createCategoryDiv = (post, category) => {
     categoryDiv.style.display = "block";
 
     const postsForCategory = document.getElementById("postsForCategory");
-    
-    const titleForCategoryDiv = document.createElement("h1");
-    titleForCategoryDiv.innerHTML = `Category: ${category}`;
-    postsForCategory.appendChild(titleForCategoryDiv);
 
     const postTitle = document.createElement("h2");
     postTitle.classList.add("title");

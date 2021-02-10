@@ -97,3 +97,9 @@ button {
     margin: 20px auto;
     padding: 20px;
 }
+
+.subtitle {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #3498db;
+}
