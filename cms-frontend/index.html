@@ -9,8 +9,9 @@
     <body>
         <div id="mainPosts">
             <header>
-                <a>Categories</a>
-                <a>Edit Posts</a>
+                <a id="linkLifestyle">Lifestyle</a>
+                <a id="linkGames">Games</a>
+                <a id="linkJob">Job</a>
                 <a href="createNewPost.html">Add New</a>
             </header>
             <div id="posts">
@@ -44,8 +45,16 @@
                 <button id="editPost">Edit Post</button>
             </div> 
         </div>
+        <div id="category">
+            <div class="header">
+                <a href="index.html">Home</a>
+            </div>
+            <div id="postsForCategory">
+            </div>
+        </div>
     </body>
     <script src="deleteOnePost.js"></script>
     <script src="editPost.js"></script>
     <script src="getAllPosts.js"></script>
+    <script src="category.js"></script>
 </html>

@@ -11,7 +11,7 @@ const database = [
         title: "One more Post",
         category: "Games",
         author: "Cecilia",
-        content: "This is one more post. In this one I'm gonna say that the best game ever is Cards Agains Humanity."
+        content: "This is one more post. In this one I'm gonna say that the best card game ever is Cards Agains Humanity."
     },
     {
         id: 2,

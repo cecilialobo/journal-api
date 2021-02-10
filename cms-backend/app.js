@@ -67,6 +67,24 @@ app.put('/posts/:id', (req, res) => {
     res.status(wasEdited ? 200 : 404).send();
 });
 
+app.get('/posts/:category', (req, res) => {
+    const { category } = req.params;
+
+    const postsInCategory = [];
+
+    for(let i = 0; i < database.length; i++) {
+        if(database[i].category == category) {
+            postsInCategory.push(database[i])
+        }
+    };
+
+    const responseBody = {
+        "posts": postsInCategory
+    };
+
+    res.send(responseBody);
+});
+
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`);
 });
