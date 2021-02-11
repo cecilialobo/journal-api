@@ -16,7 +16,7 @@ const createNewPost = () => {
     fetch(apiPath, { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(requestBody)})
         .then (response => {
             if(response.status === 201) {
-                alert("Thanks for the news!");
+                alert("Thanks for the post!");
                 window.location.assign("index.html");
             }
         });
